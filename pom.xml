@@ -23,6 +23,30 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.1.1</version>
 			</plugin>
+			 <plugin>
+                               <groupId>org.codehaus.cargo</groupId>
+                               <artifactId>cargo-maven2-plugin</artifactId>
+                                <version>1.2.0</version>
+                               <configuration>
+                                   <container>
+                                   <containerId>jboss6x</containerId>
+                                   <home>/c/Users/meenu/EAP-6.3.0</home>
+                                    <timeout>600000</timeout>
+                                   <append>false</append>
+                                  </container>
+                                <configuration>
+                                <type>existing</type>
+                                <home>/c/Users/meenu/EAP-6.3.0</home>
+                                <properties>
+                                <cargo.servlet.port>8080</cargo.servlet.port>
+                               <cargo.jboss.configuration>default</cargo.jboss.configuration>
+                                <cargo.hostname>localhost</cargo.hostname>
+                                 <cargo.rmi.port>1099</cargo.rmi.port>
+                                </properties>
+                               </configuration>
+                               </configuration>
+
+                            </plugin> 
 		</plugins>
 	</build>
 
